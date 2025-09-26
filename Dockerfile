@@ -10,8 +10,10 @@ COPY . .
 # Instala FastAPI y Uvicorn
 RUN pip install --no-cache-dir fastapi uvicorn
 
+ARG FORCE_REBUILD
+
 # Expone el puerto en el que se ejecutará la app
 EXPOSE 8050
 
 # Comando para iniciar la aplicación
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8050"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8050"]
