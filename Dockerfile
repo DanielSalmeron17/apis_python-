@@ -4,13 +4,12 @@ FROM python:3.11-slim
 # Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
+ARG FORCE_REBUILD
 # Copia los archivos de tu proyecto al contenedor
 COPY . .
 
 # Instala FastAPI y Uvicorn
 RUN pip install --no-cache-dir fastapi uvicorn
-
-ARG FORCE_REBUILD
 
 # Expone el puerto en el que se ejecutará la app
 EXPOSE 8050
