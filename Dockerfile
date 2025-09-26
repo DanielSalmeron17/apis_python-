@@ -15,4 +15,4 @@ RUN pip install --no-cache-dir fastapi uvicorn
 EXPOSE 8050
 
 # Comando para iniciar la aplicación
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8050"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8050", "--reload"]
