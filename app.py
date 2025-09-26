@@ -5,7 +5,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Bienvenido a la API FastAPI"}
+    return {"message": "Bienvenido a la API Carlos"}
 
 @app.get("/saludo")
 def saludo(nombre: Optional[str] = Query(default="Juan")):
